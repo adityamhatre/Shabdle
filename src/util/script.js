@@ -142,7 +142,7 @@ export const deleteLetter = () => {
     const currentIndexInTry = parseInt(sessionStorage.getItem('currentIndexInTry'))
     const guessRowMap = JSON.parse(sessionStorage.getItem('guessRow'))
 
-    if (currentIndexInTry == 0) return
+    if (currentIndexInTry === 0) return
 
     document.getElementsByClassName('tile')[currentIndex - 1].innerHTML = guessRowMap[currentIndex - 1] || ''
     document.getElementsByClassName('tile')[currentIndex - 1].dataset.state = ''
