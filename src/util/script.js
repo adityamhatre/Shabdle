@@ -83,6 +83,13 @@ const checkWord = () => {
                 document.getElementsByClassName('tile')[i].classList.remove('shake')
             }, 400);
         }
+
+        setTimeout(() => {
+            if (tryNumber === 7 - 1) {
+                alert('you lose')
+            }
+
+        }, 600)
     } else {
         let j = 0
         for (let i = tileCount * tryNumber; i < currentIndex; i++) {
@@ -94,8 +101,10 @@ const checkWord = () => {
             }, (++j) * 100)
 
         }
+        setTimeout(() => {
+            alert('you win')
+        }, 600)
     }
-
 
 
 }
