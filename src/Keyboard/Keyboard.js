@@ -22,6 +22,7 @@ export function KeyBoard() {
     }
 
 
+
     return <div className="keyboard">
         {row(1)}
         {row(2)}
@@ -31,5 +32,7 @@ export function KeyBoard() {
         {row(6)}
         {row(7)}
         {row(8)}
+        <Key key="submit">submit</Key>
+        {/* <Key key="del">del</Key> */}
     </div>
 }

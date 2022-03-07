@@ -44,6 +44,19 @@ export const GuessRow = (props) => {
         }
     }
     fillHalfLetters()
+    const answerMap = {}
+    const saveIndexes = () => {
+        let j = 0
+        for (let i = 0; i < letters.length; i++) {
+            if (!halfLettersList.includes(letters[i])) {
+                answerMap[j++] = letters[i]
+            }
+        }
+    }
+    saveIndexes()
+    sessionStorage.setItem('answerMap', JSON.stringify(answerMap))
+
     document.documentElement.style.setProperty('--length', fullLetters.length);
+    sessionStorage.setItem('tileCount', fullLetters.length);
     return fullLetters.map((letter, index) => <div key={index} className="tile">{map[index]}</div>)
 }
