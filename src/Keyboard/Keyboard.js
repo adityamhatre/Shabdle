@@ -33,6 +33,6 @@ export function KeyBoard() {
         {row(7)}
         {row(8)}
         <Key key="submit">submit</Key>
-        {/* <Key key="del">del</Key> */}
+        <Key key="del">del</Key>
     </div>
 }

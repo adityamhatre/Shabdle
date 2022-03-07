@@ -58,5 +58,6 @@ export const GuessRow = (props) => {
 
     document.documentElement.style.setProperty('--length', fullLetters.length);
     sessionStorage.setItem('tileCount', fullLetters.length);
+    sessionStorage.setItem('guessRow', JSON.stringify(map))
     return fullLetters.map((letter, index) => <div key={index} className="tile">{map[index]}</div>)
 }
