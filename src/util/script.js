@@ -47,7 +47,7 @@ export const submitWord = () => {
     const tileCount = parseInt(sessionStorage.getItem('tileCount'))
     const currentIndex = parseInt(sessionStorage.getItem('currentIndex'))
     const currentIndexInTry = parseInt(sessionStorage.getItem('currentIndexInTry'))
-
+    console.log('hey geek! the word is ' + sessionStorage.getItem('word'))
     if (tileCount !== Object.keys(currentWordMap).length) {
         alert('fill all the tiles')
         return
