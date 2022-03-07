@@ -8,6 +8,9 @@ export function KeyBoard() {
 
     const row = (index) => {
         const arr = [1, 2].includes(index) ? vowels : consonants
+        if (index > 2) {
+            index = index - 2
+        }
         const start = 6 * (index - 1)
         const end = start + 6
 
@@ -26,5 +29,7 @@ export function KeyBoard() {
         {row(4)}
         {row(5)}
         {row(6)}
+        {row(7)}
+        {row(8)}
     </div>
 }
